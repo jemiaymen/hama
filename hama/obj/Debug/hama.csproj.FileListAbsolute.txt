@@ -1,0 +1,14 @@
+c:\users\ajimi\documents\visual studio 2015\Projects\hama\hama\bin\Debug\hama.exe
+c:\users\ajimi\documents\visual studio 2015\Projects\hama\hama\bin\Debug\hama.pdb
+c:\users\ajimi\documents\visual studio 2015\Projects\hama\hama\obj\Debug\hama.csprojResolveAssemblyReference.cache
+c:\users\ajimi\documents\visual studio 2015\Projects\hama\hama\obj\Debug\hama.MDI.resources
+c:\users\ajimi\documents\visual studio 2015\Projects\hama\hama\obj\Debug\hama.Properties.Resources.resources
+c:\users\ajimi\documents\visual studio 2015\Projects\hama\hama\obj\Debug\hama.csproj.GenerateResource.Cache
+c:\users\ajimi\documents\visual studio 2015\Projects\hama\hama\obj\Debug\hama.exe
+c:\users\ajimi\documents\visual studio 2015\Projects\hama\hama\obj\Debug\hama.pdb
+c:\users\ajimi\documents\visual studio 2015\Projects\hama\hama\obj\Debug\hama.About.resources
+C:\Users\ajimi\documents\visual studio 2015\Projects\hama\hama\obj\Debug\hama.NewConfig.resources
+F:\hama\hama\obj\Debug\hama.exe
+F:\hama\hama\obj\Debug\hama.pdb
+C:\Users\Inspiron\Desktop\hama\hama\obj\Debug\hama.exe
+C:\Users\Inspiron\Desktop\hama\hama\obj\Debug\hama.pdb
