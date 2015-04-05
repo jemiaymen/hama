@@ -12,3 +12,14 @@ F:\hama\hama\obj\Debug\hama.exe
 F:\hama\hama\obj\Debug\hama.pdb
 C:\Users\Inspiron\Desktop\hama\hama\obj\Debug\hama.exe
 C:\Users\Inspiron\Desktop\hama\hama\obj\Debug\hama.pdb
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.exe
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.pdb
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.csprojResolveAssemblyReference.cache
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.About.resources
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.MDI.resources
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.NewConfig.resources
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.Properties.Resources.resources
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.ShowConfig.resources
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.csproj.GenerateResource.Cache
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\bin\Debug\hama.exe
+C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\bin\Debug\hama.pdb

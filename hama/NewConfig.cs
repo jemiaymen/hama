@@ -13,31 +13,31 @@ namespace hama
 {
     public partial class NewConfig : Form
     {
-        public AutoResetEvent receiveNow;
-        public SerialPort _port;
+        Serial s;
 
         public NewConfig()
         {
             InitializeComponent();
+            s = new Serial();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             try
             {
-                if (_port != null && _port.IsOpen)
+                if (s._port != null && s._port.IsOpen)
                 {
-                    _port.Close();
+                    s._port.Close();
                     btnOK.Text = "Connect";
                     return;
                 }
-                _port = OpenPort(cboPortName.Text,Convert.ToInt32(cboBaudRate.Text),Convert.ToInt32(cboDataBits.Text),Convert.ToInt32(txtReadTimeOut.Text),Convert.ToInt32(txtWriteTimeOut.Text));
+                s.OpenPort(cboPortName.Text,Convert.ToInt32(cboBaudRate.Text),Convert.ToInt32(cboDataBits.Text),Convert.ToInt32(txtReadTimeOut.Text),Convert.ToInt32(txtWriteTimeOut.Text));
 
-                if (_port.IsOpen)
+                if (s._port.IsOpen)
                 {
-                    ((MDI)this.MdiParent).statusStrip.Text = "Modem is connected at PORT " + _port.PortName;
+                    ((MDI)this.MdiParent).statusStrip.Text = "Modem is connected at PORT " + s._port.PortName;
                     this.MdiParent.Refresh();
-                    txtlog.Text += "\nModem is connected at PORT " + _port.PortName;
+                    txtlog.Text += "\nModem is connected at PORT " + s._port.PortName;
                     commandGroup.Enabled = true;
                     btnOK.Text = "Deconect";
                 }else
@@ -68,7 +68,7 @@ namespace hama
         {
             try
             {
-                txtlog.Text += ExecCommand(_port, txtcmd.Text, Convert.ToInt32(txtWriteTimeOut.Text), "Erro Run command");
+                txtlog.Text += s.ExecCommand(s._port, txtcmd.Text, Convert.ToInt32(txtWriteTimeOut.Text), "Erro Run command");
             }
             catch (Exception ex)
             {
@@ -77,103 +77,11 @@ namespace hama
 
         }
 
-        #region serialport helper
-        public SerialPort OpenPort(string p_strPortName, int p_uBaudRate, int p_uDataBits, int p_uReadTimeout, int p_uWriteTimeout)
-        {
-            receiveNow = new AutoResetEvent(false);
-            SerialPort port = new SerialPort();
-
-            try
-            {
-                port.PortName = p_strPortName;                 
-                port.BaudRate = p_uBaudRate;                   
-                port.DataBits = p_uDataBits;                   
-                port.StopBits = StopBits.One;                  
-                port.Parity = Parity.None;                     
-                port.ReadTimeout = p_uReadTimeout;             
-                port.WriteTimeout = p_uWriteTimeout;           
-                port.Encoding = Encoding.GetEncoding("iso-8859-1");
-                port.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
-                port.Open();
-                port.DtrEnable = true;
-                port.RtsEnable = true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return port;
-        }
-
-        public void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            try
-            {
-                if (e.EventType == SerialData.Chars)
-                {
-                    receiveNow.Set();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        
 
 
-        public string ReadResponse(SerialPort port, int timeout)
-        {
-            string buffer = string.Empty;
-            try
-            {
-                do
-                {
-                    if (receiveNow.WaitOne(timeout, false))
-                    {
-                        string t = port.ReadExisting();
-                        buffer += t;
-                    }
-                    else
-                    {
-                        if (buffer.Length > 0)
-                            throw new ApplicationException("Response received is incomplete.");
-                        else
-                            throw new ApplicationException("No data received from phone.");
-                    }
-                }
-                while (!buffer.EndsWith("\r\nOK\r\n") && !buffer.EndsWith("\r\n> ") && !buffer.EndsWith("\r\nERROR\r\n"));
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return buffer;
-        }
 
 
-        public string ExecCommand(SerialPort port, string command, int responseTimeout, string errorMessage)
-        {
-            try
-            {
-
-                port.DiscardOutBuffer();
-                port.DiscardInBuffer();
-                receiveNow.Reset();
-                port.Write(command + "\r");
-
-                string input = ReadResponse(port, responseTimeout);
-                if ((input.Length == 0) || ((!input.EndsWith("\r\n> ")) && (!input.EndsWith("\r\nOK\r\n"))))
-                    throw new ApplicationException("No success message was received.");
-                return input;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-
-        #endregion
 
     }
 }

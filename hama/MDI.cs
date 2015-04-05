@@ -50,5 +50,17 @@ namespace hama
         {
 
         }
+
+        private void newConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void defaultConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowConfig sh = new ShowConfig();
+            sh.MdiParent = this;
+            sh.Show();
+        }
     }
 }
