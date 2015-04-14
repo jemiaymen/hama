@@ -64,5 +64,19 @@ namespace hama
             sh.MdiParent = this;
             sh.Show();
         }
+
+        private void lireSMSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReadSMS r = new ReadSMS();
+            r.MdiParent = this;
+            r.Show();
+        }
+
+        private void supprimerUnSMSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteSMS d = new DeleteSMS();
+            d.MdiParent = this;
+            d.Show();
+        }
     }
 }

@@ -47,7 +47,6 @@
             this.lireSMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.supprimerUnSMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerTousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testReseauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -102,27 +101,27 @@
             // newConfigToolStripMenuItem
             // 
             this.newConfigToolStripMenuItem.Name = "newConfigToolStripMenuItem";
-            this.newConfigToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newConfigToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.newConfigToolStripMenuItem.Text = "&Default Config";
             this.newConfigToolStripMenuItem.Click += new System.EventHandler(this.newConfigToolStripMenuItem_Click);
             // 
             // defaultConfigToolStripMenuItem
             // 
             this.defaultConfigToolStripMenuItem.Name = "defaultConfigToolStripMenuItem";
-            this.defaultConfigToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.defaultConfigToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.defaultConfigToolStripMenuItem.Text = "&Show Config";
             this.defaultConfigToolStripMenuItem.Click += new System.EventHandler(this.defaultConfigToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(148, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -165,8 +164,7 @@
             this.gestionSMSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lireSMSToolStripMenuItem,
             this.toolStripSeparator3,
-            this.supprimerUnSMSToolStripMenuItem,
-            this.supprimerTousToolStripMenuItem});
+            this.supprimerUnSMSToolStripMenuItem});
             this.gestionSMSToolStripMenuItem.Name = "gestionSMSToolStripMenuItem";
             this.gestionSMSToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.gestionSMSToolStripMenuItem.Text = "&Gestion SMS";
@@ -174,8 +172,9 @@
             // lireSMSToolStripMenuItem
             // 
             this.lireSMSToolStripMenuItem.Name = "lireSMSToolStripMenuItem";
-            this.lireSMSToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.lireSMSToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.lireSMSToolStripMenuItem.Text = "&Lire SMS";
+            this.lireSMSToolStripMenuItem.Click += new System.EventHandler(this.lireSMSToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -185,14 +184,9 @@
             // supprimerUnSMSToolStripMenuItem
             // 
             this.supprimerUnSMSToolStripMenuItem.Name = "supprimerUnSMSToolStripMenuItem";
-            this.supprimerUnSMSToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.supprimerUnSMSToolStripMenuItem.Text = "&Supprimer un SMS";
-            // 
-            // supprimerTousToolStripMenuItem
-            // 
-            this.supprimerTousToolStripMenuItem.Name = "supprimerTousToolStripMenuItem";
-            this.supprimerTousToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.supprimerTousToolStripMenuItem.Text = "Supprimer &Tout SMS";
+            this.supprimerUnSMSToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.supprimerUnSMSToolStripMenuItem.Text = "&Supprimer SMS";
+            this.supprimerUnSMSToolStripMenuItem.Click += new System.EventHandler(this.supprimerUnSMSToolStripMenuItem_Click);
             // 
             // testToolStripMenuItem
             // 
@@ -201,25 +195,25 @@
             this.toolStripSeparator4,
             this.testModemToolStripMenuItem});
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.testToolStripMenuItem.Text = "&Test";
             // 
             // testReseauToolStripMenuItem
             // 
             this.testReseauToolStripMenuItem.Name = "testReseauToolStripMenuItem";
-            this.testReseauToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.testReseauToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.testReseauToolStripMenuItem.Text = "Test &Reseau";
             this.testReseauToolStripMenuItem.Click += new System.EventHandler(this.testReseauToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(137, 6);
             // 
             // testModemToolStripMenuItem
             // 
             this.testModemToolStripMenuItem.Name = "testModemToolStripMenuItem";
-            this.testModemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.testModemToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.testModemToolStripMenuItem.Text = "Test &Modem";
             this.testModemToolStripMenuItem.Click += new System.EventHandler(this.testModemToolStripMenuItem_Click);
             // 
@@ -266,7 +260,6 @@
         private System.Windows.Forms.ToolStripMenuItem lireSMSToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem supprimerUnSMSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem supprimerTousToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testReseauToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
