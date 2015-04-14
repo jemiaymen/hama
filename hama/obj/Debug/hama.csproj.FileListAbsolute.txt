@@ -23,3 +23,5 @@ C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.Sh
 C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.csproj.GenerateResource.Cache
 C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\bin\Debug\hama.exe
 C:\Users\aymen\Documents\Visual Studio 2015\Projects\hama\hama\bin\Debug\hama.pdb
+C:\Users\ajimi\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.DefaultConfig.resources
+C:\Users\ajimi\Documents\Visual Studio 2015\Projects\hama\hama\obj\Debug\hama.ShowConfig.resources

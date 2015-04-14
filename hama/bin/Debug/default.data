@@ -1,0 +1,4 @@
+AT+IPR=
+AT+ICF= 2,1
+AT+WSRT=1;"00:20"
+AT&W

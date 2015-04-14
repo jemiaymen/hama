@@ -11,7 +11,6 @@ namespace hama
 {
     public partial class MDI : Form
     {
-
         public MDI()
         {
             InitializeComponent();
@@ -53,7 +52,10 @@ namespace hama
 
         private void newConfigToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DefaultConfig d = new DefaultConfig();
 
+            d.MdiParent = this;
+            d.Show();
         }
 
         private void defaultConfigToolStripMenuItem_Click(object sender, EventArgs e)
